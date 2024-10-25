@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面布局示例</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入CSS样式文件 -->
+</head>
+<body>
+
+<header>
+    <div class="carousel"> <!-- 轮播图容器 -->
+        <div class="slides"> <!-- 幻灯片容器 -->
+            <div class="slide active" style="background-image: url('images/slide1.jpg');"></div>
+            <div class="slide" style="background-image: url('images/slide2.jpg');"></div>
+            <div class="slide" style="background-image: url('images/slide3.jpg');"></div>
+        </div>
+        <div class="indicators"> <!-- 索引点 -->
+            <span class="indicator active" onclick="currentSlide(0)"></span>
+            <span class="indicator" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+</header>
+
+<div class="container"> <!-- 新增的容器 -->
+    <aside>
+        <nav>
+            <ul>
+                <li><button class="nav-button" onclick="showModule('studentInfo')">基本信息</button></li>
+                <li><button class="nav-button" onclick="showModule('academicSystem')">教务系统</button></li>
+                <li><button class="nav-button" onclick="showModule('courseSchedule')">我的课表</button></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <div id="content"> <!-- 这里是主体部分 -->
+            <div id="studentInfo" style="display: none;">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>姓名</td>
+                            <td>张三</td>
+                            <td>班级</td>
+                            <td>计算机一班</td>
+                        </tr>
+                        <tr>
+                            <td>学号</td>
+                            <td>2022001</td>
+                            <td>出生日期</td>
+                            <td>2002-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>性别</td>
+                            <td>男</td>
+                            <td>民族</td>
+                            <td>汉族</td>
+                        </tr>
+                        <tr>
+                            <td>身份证号码</td>
+                            <td>123456789012345678</td>
+                            <td>户籍地址</td>
+                            <td>北京市海淀区</td>
+                        </tr>
+                        <tr>
+                            <td>政治面貌</td>
+                            <td>共青团员</td>
+                            <td>入学前户口性质</td>
+                            <td>城市户口</td>
+                        </tr>
+                        <tr>
+                            <td>手机号</td>
+                            <td>13800000000</td>
+                            <td>银行卡</td>
+                            <td>6222020000000000</td>
+                        </tr>
+                        <tr>
+                            <td>身高</td>
+                            <td>180 cm</td>
+                            <td>体重</td>
+                            <td>70 kg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="academicSystem" style="display: none;">
+                <h2>教务系统</h2>
+                <p>这里是教务系统的相关信息和功能介绍。</p>
+            </div>
+            <div id="courseSchedule" style="display: none;">
+                <h2>我的课表</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>课程名称</th>
+                            <th>上课时间</th>
+                            <th>教室</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>高等数学</td>
+                            <td>周一 8:00 - 10:00</td>
+                            <td>101教室</td>
+                        </tr>
+                        <tr>
+                            <td>数据结构</td>
+                            <td>周三 10:00 - 12:00</td>
+                            <td>202教室</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script> <!-- 引入JavaScript文件 -->
+</body>
+</html>

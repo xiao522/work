@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box; /* 确保元素的宽高包含内边距和边框 */
+    margin: 0; /* 清除默认边距 */
+    padding: 0; /* 清除默认内边距 */
+}
+
+body {
+    font-family: Arial, sans-serif; /* 设置字体 */
+}
+
+/* 头部样式 */
+header {
+    position: relative; /* 相对定位，用于绝对定位的索引点 */
+    width: 100%; /* 头部宽度100% */
+    height: 300px; /* 头部高度 */
+    overflow: hidden; /* 隐藏超出部分 */
+}
+
+.carousel {
+    width: 100%; /* 轮播图宽度100% */
+    height: 100%; /* 轮播图高度100% */
+}
+
+.slides {
+    display: flex; /* 使用Flexbox水平排列幻灯片 */
+    transition: transform 0.5s ease; /* 幻灯片切换时的动画效果 */
+}
+
+.slide {
+    min-width: 100%; /* 每个幻灯片宽度100% */
+    height: 100%; /* 每个幻灯片高度100% */
+    background-size: cover; /* 背景图片覆盖整个幻灯片 */
+    background-position: center; /* 背景图片居中 */
+}
+
+.indicators {
+    position: absolute; /* 绝对定位索引点 */
+    bottom: 10px; /* 距离底部10px */
+    left: 50%; /* 左侧居中 */
+    transform: translateX(-50%); /* 进一步居中 */
+    display: flex; /* 水平排列索引点 */
+}
+
+.indicator {
+    width: 10px; /* 索引点宽度 */
+    height: 10px; /* 索引点高度 */
+    background-color: white; /* 默认白色 */
+    border-radius: 50%; /* 圆形 */
+    margin: 0 5px; /* 左右间距 */
+    cursor: pointer; /* 鼠标悬停时显示为手型 */
+}
+
+.indicator.active {
+    background-color: blue; /* 当前激活索引点颜色 */
+}
+
+/* 新增容器样式 */
+.container {
+    display: flex; /* 使用Flexbox布局 */
+}
+
+/* 侧边栏样式 */
+aside {
+    width: 250px; /* 侧边栏宽度 */
+    background-color: #f4f4f4; /* 背景色 */
+    padding: 20px; /* 内边距 */
+}
+
+.nav-button {
+    background-color: lightblue; /* 按钮背景颜色 */
+    border: none; /* 去掉边框 */
+    padding: 10px; /* 按钮内边距 */
+    width: 100%; /* 按钮宽度100% */
+    margin: 5px 0; /* 按钮间距 */
+    cursor: pointer; /* 鼠标悬停时显示为手型 */
+}
+
+/* 主体部分样式 */
+main {
+    flex-grow: 1; /* 自适应剩余空间 */
+    padding: 20px; /* 内边距 */
+}
+
+table {
+    width: 100%; /* 表格宽度100% */
+    border-collapse: collapse; /* 边框合并 */
+    margin-top: 20px; /* 表格顶部间距 */
+}
+
+th, td {
+    border: 1px solid #ccc; /* 单元格边框 */
+    padding: 10px; /* 单元格内边距 */
+    text-align: left; /* 文本左对齐 */
+}
+
+th {
+    background-color: #f4f4f4; /* 表头背景色 */
+}
